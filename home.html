@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="home.html">
+    <style>
+        a{
+            text-decoration: none;
+            margin-right: 5%;
+            color: black;
+            cursor: pointer;
+        }
+        #nav{
+            display: flex;
+            margin-left: 60%;
+            margin-right: 50px;
+            width: auto;
+            height: 50px;
+            white-space: nowrap;
+        }
+        #pass{
+            display: flex;
+            margin-right: auto;
+            margin-top: 10%;
+            margin-left: auto;
+            width: 200px;
+            height: 200px;
+            border: 2px solid orangered;
+            border-radius: 100px;
+        }
+        #name{
+            font-size: xx-large;
+            color: orangered;
+            text-align: center;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-transform: uppercase;
+        }
+        #namedesc{
+            text-align: center;
+            color: black;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        #discover{
+            font-size: large;
+            color: orangered;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-transform: uppercase;
+            margin-top: 30%;
+        }
+        #atitle{
+            font-size: xx-large;
+            color: black;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        #ades{
+            width: 20%;
+            height: 400px;
+        }
+        #aboutdesc{
+            display: flex;
+        }
+        #pdes{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        #summary{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            width: 70%;
+            height: 50%;
+            border: 2px solid orangered;
+        }
+        #cvdown{
+            background-color: orangered;
+            color: white;
+            width: 100px;
+            height: 25px;
+            border: none;
+            cursor: pointer;
+                        margin-left: 10px;
+
+        }
+        #abouttext{
+            padding-left: 5%;
+            width: 50%;
+        }
+        #what{
+            margin-top: 30%;
+            color: orangered;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: larger;
+            margin-left: 20px;
+        }
+        #myserv{
+            font-size: larger;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin-left: 20px;
+            color: white;
+
+        }
+        #osi{
+            width: 30%;
+            height: 60%;
+            border: 1px solid orangered;
+            padding: 5px;
+            gap: 10px;
+            display: inline-block;
+            margin-right: 20px;
+        }
+        #osit{
+            text-align: center;
+            color: orangered;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-decoration: underline;
+        }
+        #softw{
+            width: 30%;
+            height: 80%;
+            border: 1px solid orangered;
+            padding: 5px;
+            gap: 20px;
+            display: inline-block;
+            margin-right: 0px;
+        }
+        #serdesc{
+            margin-right: 20px;
+            display: inline block;
+            gap: 10px;
+            margin-left: 20px;
+        }
+        #about{
+            background-color: rgb(56, 46, 46);
+            width: auto;
+            height: 700px;
+        }
+        #atitle{
+            color: white;
+        }
+        #pdes{
+            color: white;
+        }
+        #sumname{
+            color: white;
+            margin-left: 10px;
+        }
+        #sumage{
+            color: white;
+            margin-left: 10px;
+
+        }
+        #sumexp{
+            color: white;
+            margin-left: 10px;
+
+        }
+        #frexp{
+            color: white;
+                        margin-left: 10px;
+
+        }
+        #services{
+            background-color: rgb(56, 46, 46);
+            height: 480px;
+            margin-left: 20px;
+        }
+        #soft{
+            color: orangered;
+            text-align: center;
+            text-decoration: underline;
+        }
+        #summary{
+            margin-left: 0px;
+        }
+        #wifi{
+            display: block;
+            width: 30%;
+            height: 80%;
+            border: 1px solid orangered;
+            padding: 5px;
+            gap: 20px;
+            display: inline-block;
+        }
+        #wifititle{
+            color: orangered;
+            text-align: center;
+            text-decoration: underline;
+        }
+        #wif{
+            color: white;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        #softt{
+            color: white;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+        }
+        #ost{
+            color: white;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        #projects{
+            margin-top: 30%;
+        }
+    </style>
+</head>
+<body>
+    <section id="home">
+            <section id="nav">
+                <a href="#home">home</a>
+                <a href="#about">about</a>
+                <a href="#services">services</a>
+                <a href="#projects">projects</a>
+                <a href="#resume">resume</a>
+                <a href="#contact">contact me</a>
+                
+            </section>
+            <img src="WIN_20250517_18_12_00_Pro.jpg" alt="" id="pass">
+            <section id="passdesc">
+                <p id="name"><strong>Abel Kihara Ndiritu</strong></p>
+                <p id="namedesc">A dedicated front end web developer</p>
+            </section>
+    </section>
+      
+
+
+    <section id="about"> 
+             <p id="discover"><strong>discover</strong> </p>  
+             <div id="aboutdesc">
+                <img src="WIN_20250517_18_12_00_Pro.jpg" alt="" id="ades">
+                     <div id="abouttext">
+                        <p id="atitle"><strong>About Me</strong></p>
+                        <p id="pdes">My name is Abel Kihara a student in Kirinyaga University, based in Kutus Kirinyaga county. I'm passionate and dedicated to my work and I'm an expirienced frontend developer. I have developed and acquired necessary skills to build great and premium websites. </p>
+                             <section id="summary">
+                                    <p id="sumname">Name: Abel Kihara Ndiritu</p>
+                                    <p id="sumage">Age: 19 years</p>
+                                    <p id="sumexp">expirience: 2 years</p>
+                                    <p id="frexp">Freelance: Available</p>
+                                       <div id="download">
+                                          <a href="my cv.pdf" download="my cv">
+                                            <button id="cvdown">Download Cv</button>
+                                          </a>
+                                       </div>
+                             </section>
+                     </div>
+                 
+             </div>
+    </section>
+
+
+
+    <section id="services">
+       <section id="stext">
+           <p id="what"><strong>What I Do</strong></p>
+           <p id="myserv"><strong>My Services</strong></p>
+       </section>
+        <div id="serdesc">
+             <section id="osi">
+                <p id="osit"><strong>Operating System Installation</strong></p>
+                <p id="ost">I install any operating system on computers including: windows & Linux operating systems</p>
+             </section>
+
+             <section id="softw">
+                <p id="soft">Software maintenace and trouble shooting🛠️🔧</p>
+                <p id="softt">Office installation and activation</p>
+             </section>
+
+             <section id="wifi">
+                <p id="wifititle">wifi installation🛜🛜🛜🛜</p>
+                <p id="wif">we set up your home wifi wherever you are located</p>
+             </section>
+        </div>
+    </section>
+
+
+
+    <section id="projects">
+        <section id="projt">What I Have Done</section>
+        <p id="myprojects">My Projects</p>
+        <section id="psum">
+            <section id="calc">
+                <p id="calcthead">Simple Calculator</p>
+                <p id="calctext1">I have built a simple mathematical calculator</p>
+                <p id="calctext2">source: </p>
+            </section>
+
+            <section id="grade">
+                <p id="grade head">Grade Calculator</p>
+                <p id="gradetext1">I have also built a simple grade calculator that calculates the marks for each test and displays the mean marks and the mean grade for each unit</p>
+                <p id="gradetext2">Source: </p>
+            </section>
+        </section>
+    </section>
+</body>
+</html>
