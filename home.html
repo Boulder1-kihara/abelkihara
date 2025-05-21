@@ -5,7 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="home.html">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/font-awesome.min.css">
+
     <style>
+        @keyframes appear {
+            from{
+                opacity: 1;
+                transform: translatex(100px);
+            }
+            to{
+                opacity: 1;
+                transform: scale(0px);
+            }
+        }
+        @keyframes appear1 {
+            from{
+                opacity: 1;
+                transform: translatex(-100px);
+            }
+            to{
+                opacity: 1;
+                transform: scale(0px);
+            }
+        }
+        @keyframes appear2 {
+            from{
+                opacity: 1;
+                scale: 0.5;
+                transform: translateX(-100px);
+            }
+            to{
+                opacity: 1;
+                scale: 1;
+                transform: scale(0px);
+            }
+        }
         body {
             margin: 0; /* Reset default body margin */
             padding: 0;
@@ -18,6 +53,7 @@
         }
         #nav {
             display: flex;
+            background-color: white;
             justify-content: flex-end; /* Push navigation to the right */
             margin-right: 20px; /* Add some margin to the right */
             height: auto; /* Adjust height as needed */
@@ -37,14 +73,19 @@
             height: auto; /* Maintain aspect ratio */
             border: 2px solid orangered;
             border-radius: 50%; /* Make it a circle */
+            animation: appear2 1s ease-out; /* Apply animation */
+
         }
         #passdesc {
             text-align: center;
             padding: 10px;
+            animation: appear2 1s ease-out; /* Apply animation */
+
         }
         #name {
             font-size: 1.8rem; /* Use rem for responsive font sizing */
             color: orangered;
+            animation: appear2 1s ease-out; /* Apply animation */
             text-transform: uppercase;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
@@ -59,7 +100,15 @@
             text-transform: uppercase;
             margin-top: 10%;
         }
+        #discover{
+            animation: appear1 linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
+        }
         #atitle {
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
             font-size: 1.8rem;
             color: black;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -69,6 +118,9 @@
             max-width: 300px; /* Limit maximum width */
             height: auto;
             border-radius: 10px;
+            animation: appear1 linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
         }
         #aboutdesc {
             display: flex;
@@ -84,6 +136,9 @@
         #pdes {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             line-height: 1.6;
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
         }
         #summary {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -92,6 +147,9 @@
             padding: 15px;
             box-sizing: border-box;
             margin-bottom: 20px;
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
         }
         #cvdown {
             background-color: orangered;
@@ -101,6 +159,9 @@
             cursor: pointer;
             margin-top: 10px;
             font-size: 1rem;
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
         }
         #what {
             margin-top: 20%;
@@ -108,6 +169,9 @@
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             font-size: 1.2rem;
             text-align: center;
+            animation: appear1 linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
         }
         #myserv {
             font-size: 1.5rem;
@@ -115,6 +179,9 @@
             color: black;
             text-align: center;
             margin-bottom: 20px;
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
         }
         #osi, #softw, #wifi {
             width: 90%; /* Start with 90% width */
@@ -125,6 +192,9 @@
             margin: 10px auto; /* Center the boxes and add vertical margin */
             display: block; /* Ensure block display for proper centering */
             box-sizing: border-box; /* Include padding in width calculation */
+            animation: appear2 linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
         }
 
         #serdesc {
@@ -155,11 +225,17 @@
         #projt {
             font-size: 1.2rem;
             color: orangered;
+            text-align: left;
+            animation: appear1 linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
         }
         #myprojects {
             font-size: 1.5rem;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             margin-bottom: 20px;
+            text-align: left;
+            font-size: xx-large;
         }
         #psum {
             display: flex;
@@ -168,14 +244,18 @@
             padding: 10px;
             box-sizing: border-box;
         }
-        #calc, #grade {
+        #calc, #grade, #final {
             width: 90%; /* Make project sections responsive */
             max-width: 400px; /* Limit maximum width */
+            margin-left: 5px;
             margin: 15px auto; /* Add vertical margin and center */
-            border: 1px solid #ccc; /* Add a border for separation */
+            border: 1px solid orangered; /* Add a border for separation */
             padding: 15px;
             box-sizing: border-box;
             text-align: left; /* Align text to the left within the project section */
+            animation: appear1 linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
         }
         #calcthead, #gradehead {
             font-size: 1.2rem;
@@ -248,6 +328,181 @@
                 padding: 8px 16px;
             }
         }
+        #calctext1, #calctext2, #gradetext1, #gradetext2, #finald1, #finald2{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        #gradehead, #calchead, #finalt{
+            text-decoration: underline;
+            color: orangered;
+        }
+        #proj1, #proj2, #proj3{
+            background-color: orangered;
+            border: none;
+            color: white;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            height: 30px;
+            cursor: pointer;
+        }
+        #rest{
+            color: black;
+            margin-top: 20%;
+            font-size: xx-large;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
+        }
+        #resume{
+            margin-left: 10px;
+        }
+        #contact{
+            margin-top: 20%;
+            display: flex;
+            grid-gap: 20px;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+            height: 500px;
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
+        }
+        #contact a:hover {
+            background-color: #ff4500;
+            transform: translateY(-25px);
+        }
+        #view{
+            background-color: orangered;
+            border: none;
+            height: 30px;
+            color: white;
+            cursor: pointer;
+            animation: appear1 linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
+        }
+        #awards{
+            margin-top: 20%;
+            margin-left: 20px;
+        }
+        #cs{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            width: 30%;
+            display: inline-block;
+            border: 2px solid orangered;
+            padding: 15px;
+            box-sizing: border-box;
+            margin-top: 20px;
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
+            animation: appear2 linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
+        }
+        #wd{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            width: 30%;
+            display: inline-block;
+            border: 2px solid orangered;
+            padding: 15px;
+            box-sizing: border-box;
+            margin-top: 20px;
+            animation: appear1 linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
+            animation: appear2 linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
+        }
+        #ndiritu, #ak{
+            background-color: orangered;
+            border: none;
+            color: white;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            height: 30px;
+            cursor: pointer;
+            animation: appear2 linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
+        }
+        #skills{
+            margin-top: 20%;
+        }
+        #fb, #ig, #li, #gith, #yt, #tw, #gm, #ph, #wh{
+            width: 70px;
+            height: 70px;
+            background-color: orangered;
+            display: inline-flex;
+            border-radius: 100px;
+            justify-content: center;
+            align-items: center;
+        }
+        #skill{
+            color: black;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin-left: 10px;
+            display: inline-flex;
+            gap: 10px;
+        }
+        #htm, #css, #git, #see, #javas, #sq, #dsa, #unity{
+            width: 100px;
+            height: 60px;
+            border: orangered, 1px solid;
+            align-items: center;
+            justify-content: center;
+            display: grid;
+            border-radius: 2px;
+        }
+        #skill p:hover{
+            transform: scale(1.1)
+        }
+        #awe{
+            color: orangered;
+            font-size: xx-large;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        #aw{
+           color: black;
+           font-size: xx-large;
+           font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+        }
+        #skillst{
+             color: orangered;
+             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+             font-size: xx-large;
+             animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
+        }
+        #myskills{
+            font-size: xx-large;
+            animation: appear1 linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        #skills{
+            margin-left: 20px;
+        }
+        #htm, #css, #git, #see{
+             animation: appear1 linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
+            animation: appear2 linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
+        }
+        #javas, #sq, #dsa, #unity{
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
+            animation: appear2 linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
+            
+        }
     </style>
 </head>
 <body>
@@ -258,7 +513,9 @@
             <a href="#services">services</a>
             <a href="#projects">projects</a>
             <a href="#resume">resume</a>
-            <a href="#contact">contact me</a>
+            <a href="#awards">awards</a>
+            <a href="#skills">skills</a>
+            <a href="#contact">contact</a>
         </section>
         <img src="WIN_20250517_18_12_00_Pro.jpg" alt="" id="pass">
         <section id="passdesc">
@@ -313,20 +570,126 @@
     </section>
 
     <section id="projects">
-        <section id="projt">What I Have Done</section>
-        <p id="myprojects">My Projects</p>
+        <section id="projt"><strong>What I Have Done</strong> </section>
+        <p id="myprojects"><strong>My Projects</strong></p>
         <section id="psum">
             <section id="calc">
-                <p id="calcthead">Simple Calculator</p>
+                <p id="calchead" style="font-size: x-large;">Simple Calculator</p>
                 <p id="calctext1">I have built a simple mathematical calculator</p>
-                <p id="calctext2">source: </p>
+                <div id="view1">
+                        <a href="calcboulder.netlify.app">
+                            <button id="proj1">view my project</button>
+                        </a>
+                    </div>
             </section>
 
             <section id="grade">
                 <p id="gradehead">Grade Calculator</p>
                 <p id="gradetext1">I have also built a simple grade calculator that calculates the marks for each test and displays the mean marks and the mean grade for each unit</p>
-                <p id="gradetext2">Source: </p>
+                <div id="view2">
+                        <a href="mygradecalculator1.netlify.app">
+                            <button id="proj2">view my project</button>
+                        </a>
+                    </div>
             </section>
+
+            <section id="final">
+                <p id="finalt" style="font-size: x-large;"><strong>e-commerce website</strong></p>
+                <p id="finald1">I have built an e-commerce website that lets the user know the items added to cart and displays the sum of the amont of goods bought</p>
+                <div id="view3">
+                        <a href="abelfinalproject.netlify.app">
+                            <button id="proj3">view my project</button>
+                        </a>
+                    </div>
+            </section>
+        </section>
+    </section>
+
+
+
+    <section id="resume">
+            <p id="rest"><strong>view my resume</strong> </p>
+            <a href="my cv.pdf">
+                <button id="view">view my cv</button>
+            </a>
+    </section>
+
+
+
+    <section id="awards">
+        <p id="awe"><strong>what I have earned</strong></p>
+        <p id="aw"><strong>awards</strong></p>
+           <section id="awd">
+               <section id="cs">
+                  <p id="cst"><strong>ICT Authority of Kenya</strong></p>
+                  <p id="csd"> After completing my learning in cyber security I earned a certificate after completion</p>
+                   <a href="abelkihara8gmail-com-3535-3546-20250325-e0d954d4d4.pdf">
+                         <button id="ak">view achievement</button>
+                   </a>             
+                </section>
+               <section id="wd">
+                   <p id="wdt"><strong>Computer Society of Kirinyaga (CSK)</strong> </p>
+                   <p id="wdd">This is a club found in Kirinyaga University that deals in technology. Through this, I earned a certificate as being one of the most active members in the club. I also earned a certificate in participating in web development after passing all mymodules.</p>
+                    <a href="Ndiritu Abel Kihara certificate.pdf">
+                        <button id="ndiritu">view achievement</button>
+                    </a>
+                </section>
+           </section>
+    </section>
+
+
+
+    <section id="skills">
+        <p id="skillst">what I know</p>
+        <p id="myskills"><strong>My Skills</strong></p>
+        <section id="skill">
+            <p id="htm">HTML5</p>
+            <p id="css">CSS3</p>
+            <P id="git">Git and GitHub</P>
+            <P id="see">C</P>
+            <P id="javas">Java Script</P>
+            <p id="sq">SQL</p>
+            <P id="dsa">Data Structures and Algorithms</P>
+            <p id="unity">unity XR Development</p>
+        </section>
+        
+    </section>
+
+    <section id="contact">
+        <section id="facebook">
+            <a href="#" class="fa fa-facebook" id="fb"></a>
+        </section>
+
+        <section id="linkedin">
+        <a href="#" class="fa fa-linkedin" id="li"></a>
+        </section>
+
+        <section id="instagram">
+                    <a href="#" class="fa fa-instagram" id="ig"></a>
+        </section>
+
+        <section id="github">
+                    <a href="#" class="fa fa-github" id="gith"></a>
+        </section>
+
+        <section id="youtube">
+                    <a href="#" class="fa fa-youtube" id="yt"></a>
+        </section>
+
+        <section id="twitter">
+                    <a href="#" class="fa fa-twitter" id="tw"></a>
+        </section>
+
+        <section id="envelope">
+                    <a href="#" class="fa fa-envelope" id="gm"></a>
+        </section>
+
+        <section id="phone">
+                    <a href="#" class="fa fa-phone" id="ph"></a>
+        </section>
+
+        <section id="whatsapp">
+                    <a href="#" class="fa fa-whatsapp" id="wh"></a>
         </section>
     </section>
 </body>
