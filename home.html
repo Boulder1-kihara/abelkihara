@@ -4,47 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="home.html">
+    <!-- Remove incorrect stylesheet link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/font-awesome.min.css">
 
     <style>
-        @media (max-width: 768px) {
-  #ades, #abouttext {
-    width: 100%;
-  }
-
-  #serdesc, #psum {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #osi, #softw, #wifi, #calc, #grade {
-    width: 90%;
-    margin-bottom: 20px;
-  }
-
-  #contact {
-    flex-direction: column;
-    height: auto;
-    padding: 20px;
-  }
-
-  #fb, #ig, #li, #gith, #yt, #tw, #gm, #ph, #wh {
-    width: 50px;
-    height: 50px;
-  }
-
-  #skills {
-    flex-wrap: wrap;
-  }
-
-  #htm, #css, #git, #see, #javas, #sq, #dsa, #unity {
-    width: 45%;
-    margin: 5px;
-  }
-        }
-        
         @keyframes appear {
             from{
                 opacity: 1;
@@ -77,473 +41,358 @@
                 transform: scale(0px);
             }
         }
-        body {
-            margin: 0; /* Reset default body margin */
+        html, body {
+            margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        body {
+            width: 100vw;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        #ak, #ndiritu{
+            background-color: orangered;
+            border: none;
+            height: 30px;
+            cursor: pointer;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
         a {
             text-decoration: none;
-            margin-right: 5%;
+            margin-right: 5vw;
             color: black;
             cursor: pointer;
         }
         #nav {
             display: flex;
+            flex-wrap: wrap;
             background-color: white;
-            justify-content: flex-end; /* Push navigation to the right */
-            margin-right: 20px; /* Add some margin to the right */
-            height: auto; /* Adjust height as needed */
-            align-items: center; /* Vertically center items */
-            padding: 10px 0; /* Add vertical padding */
-            flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+            justify-content: flex-end;
+            align-items: center;
+            padding: 1rem 2vw;
+            gap: 1rem;
         }
         #nav a {
-            margin-bottom: 10px; /* Add space between links on small screens */
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
         }
-
         #pass {
-            display: flex;
-            margin: 10% auto 0 auto; /* Center the image horizontally, add top margin */
-            width: 50%; /* Make image responsive, but not too large*/
-            max-width: 300px; /* Limit the maximum width */
-            height: auto; /* Maintain aspect ratio */
+            display: block;
+            margin: 8vw auto 0 auto;
+            width: 40vw;
+            max-width: 220px;
+            height: auto;
             border: 2px solid orangered;
-            border-radius: 50%; /* Make it a circle */
-            animation: appear2 1s ease-out; /* Apply animation */
-
+            border-radius: 50%;
         }
         #passdesc {
             text-align: center;
-            padding: 10px;
-            animation: appear2 1s ease-out; /* Apply animation */
-
+            padding: 1rem;
         }
         #name {
-            font-size: 1.8rem; /* Use rem for responsive font sizing */
+            font-size: 2rem;
             color: orangered;
-            animation: appear2 1s ease-out; /* Apply animation */
             text-transform: uppercase;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-family: system-ui, sans-serif;
+             @keyframes appear1 {
+            from{
+                opacity: 1;
+                transform: translatex(100px);
+            }
+            to{
+                opacity: 1;
+                transform: scale(0px);
+            }
+        }
         }
         #namedesc {
-             animation: appear1 linear;
-            animation-timeline: view();
-            animation-range: entry 0% cover 40%;
             color: black;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-family: system-ui, sans-serif;
+             @keyframes appear {
+            from{
+                opacity: 1;
+                transform: translatex(100px);
+            }
+            to{
+                opacity: 1;
+                transform: scale(0px);
+            }
         }
-        #discover {
-            font-size: 1.2rem;
-            color: orangered;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            text-transform: uppercase;
-            margin-top: 10%;
-             animation: appear1 linear;
-            animation-timeline: view();
-            animation-range: entry 0% cover 40%;
-        }
-        #discover{
-            animation: appear1 linear;
-            animation-timeline: view();
-            animation-range: entry 0% cover 40%;
-        }
-        #atitle {
-            animation: appear linear;
-            animation-timeline: view();
-            animation-range: entry 0% cover 40%;
-            font-size: 1.8rem;
-            color: black;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-        #ades {
-            width: 80%; /* Make image responsive */
-            max-width: 300px; /* Limit maximum width */
-            height: auto;
-            border-radius: 10px;
-            animation: appear1 linear;
-            animation-timeline: view();
-            animation-range: entry 0% cover 40%;
         }
         #aboutdesc {
             display: flex;
-            flex-direction: column; /* Stack items vertically by default */
-            align-items: center; /* Center items horizontally */
-            padding: 20px;
+            flex-direction: column;
+            align-items: center;
+            padding: 2vw;
+            gap: 2vw;
+        }
+        #ades {
+            width: 80vw;
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+        }
+        #pdes{
+             @keyframes appear2 {
+            from{
+                opacity: 1;
+                transform: translatex(100px);
+            }
+            to{
+                opacity: 1;
+                transform: scale(0px);
+            }
+        }
         }
         #abouttext {
-            padding: 20px;
-            width: 100%; /* Take full width */
+            width: 100%;
             box-sizing: border-box;
-        }
-        #pdes {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            line-height: 1.6;
-            animation: appear1 linear;
-            animation-timeline: view();
-            animation-range: entry 0% cover 40%;
+            padding: 1rem;
         }
         #summary {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             width: 100%;
             border: 2px solid orangered;
-            padding: 15px;
+            padding: 1rem;
+            margin-bottom: 1rem;
             box-sizing: border-box;
-            margin-bottom: 20px;
-            animation: appear linear;
-            animation-timeline: view();
-            animation-range: entry 0% cover 40%;
         }
         #cvdown {
             background-color: orangered;
             color: white;
-            padding: 10px 20px;
+            padding: 0.7rem 1.5rem;
             border: none;
             cursor: pointer;
-            margin-top: 10px;
+            margin-top: 1rem;
             font-size: 1rem;
-            animation: appear linear;
-            animation-timeline: view();
-            animation-range: entry 0% cover 40%;
+             @keyframes appear {
+            from{
+                opacity: 1;
+                transform: translatex(100px);
+            }
+            to{
+                opacity: 1;
+                transform: scale(0px);
+            }
         }
-        #what {
-            margin-top: 20%;
-            color: orangered;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-size: 1.2rem;
-            text-align: center;
-            animation: appear1 linear;
-            animation-timeline: view();
-            animation-range: entry 0% cover 40%;
         }
-        #myserv {
-            font-size: 1.5rem;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            color: black;
-            text-align: center;
-            margin-bottom: 20px;
-            animation: appear linear;
-            animation-timeline: view();
-            animation-range: entry 0% cover 40%;
-        }
-        #osi, #softw, #wifi {
-            width: 90%; /* Start with 90% width */
-            max-width: 400px; /* But don't exceed 400px */
-            height: auto; /* Maintain aspect ratio */
-            border: 1px solid orangered;
-            padding: 15px;
-            margin: 10px auto; /* Center the boxes and add vertical margin */
-            display: block; /* Ensure block display for proper centering */
-            box-sizing: border-box; /* Include padding in width calculation */
-            animation: appear2 linear;
-            animation-timeline: view();
-            animation-range: entry 0% cover 40%;
-        }
-
         #serdesc {
             display: flex;
-            flex-direction: column; /* Stack services vertically on small screens */
-            align-items: center; /* Center items horizontally */
-            padding: 10px;
+            flex-direction: column;
+            align-items: center;
+            gap: 2vw;
+            padding: 1rem;
+        }
+        #osi, #softw, #wifi {
+            width: 90vw;
+            max-width: 400px;
+            border: 1px solid orangered;
+            padding: 1rem;
+            margin: 0.5rem 0;
             box-sizing: border-box;
         }
-        #osit, #soft, #wifititle{
-            text-align: center;
-            color: orangered;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            text-decoration: underline;
-            font-size: 1.2rem;
-        }
-        #ost, #softt, #wif {
-            color: black;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            line-height: 1.6;
-        }
-
         #projects {
-            margin-top: 20%;
-            padding: 20px;
+            margin-top: 10vw;
+            padding: 2vw;
             text-align: center;
-        }
-        #projt {
-            font-size: 1.2rem;
-            color: orangered;
-            text-align: left;
-            animation: appear1 linear;
-            animation-timeline: view();
-            animation-range: entry 0% cover 40%;
-        }
-        #myprojects {
-            font-size: 1.5rem;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            margin-bottom: 20px;
-            text-align: left;
-            font-size: xx-large;
         }
         #psum {
             display: flex;
-            flex-direction: column; /* Stack projects vertically on small screens */
-            align-items: center; /* Center projects horizontally */
-            padding: 10px;
-            box-sizing: border-box;
+            flex-direction: column;
+            align-items: center;
+            gap: 2vw;
         }
         #calc, #grade, #final {
-            width: 90%; /* Make project sections responsive */
-            max-width: 400px; /* Limit maximum width */
-            margin-left: 5px;
-            margin: 15px auto; /* Add vertical margin and center */
-            border: 1px solid orangered; /* Add a border for separation */
-            padding: 15px;
+            width: 90vw;
+            max-width: 400px;
+            margin: 1rem auto;
+            border: 1px solid orangered;
+            padding: 1rem;
             box-sizing: border-box;
-            text-align: left; /* Align text to the left within the project section */
-            animation: appear1 linear;
-            animation-timeline: view();
-            animation-range: entry 0% cover 40%;
+            text-align: left;
         }
-        #calcthead, #gradehead {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 10px;
+        #resume {
+            margin: 4vw 0;
+            text-align: center;
         }
-        #calctext1, #gradetext1 {
-            font-size: 1rem;
-            color: #555;
-            line-height: 1.6;
-            margin-bottom: 10px;
+        #rest {
+            color: black;
+            font-size: 2rem;
+            margin-bottom: 1rem;
         }
-        #calctext2, #gradetext2 {
-            font-size: 1rem;
-            color: #555;
-        }
-
-        /* Media Queries for Responsiveness */
-        @media (min-width: 768px) {
-            #nav {
-                flex-direction: row; /* Keep navigation in a row on wider screens */
-                justify-content: flex-end; /* push to the right on wider screens */
-            }
-            #nav a {
-                margin-bottom: 0; /* Remove bottom margin on wider screens */
-            }
-            #aboutdesc {
-                flex-direction: row; /* Arrange image and text in a row on wider screens */
-                align-items: stretch; /* **Make items stretch to equal height** */
-            }
-            #ades {
-                margin-right: 20px; /* Add right margin to image on wider screens */
-                width: 40%; /* Adjust image width for side-by-side layout on wider screens */
-                max-width: 400px;
-            }
-            #abouttext {
-                width: 60%; /* Adjust text width for side-by-side layout on wider screens */
-            }
-            #serdesc {
-                flex-direction: row; /* Arrange services in a row on wider screens */
-                justify-content: space-around; /* Distribute space evenly */
-                align-items: stretch; /* **Make service boxes stretch to equal height** */
-            }
-            #osi, #softw, #wifi {
-                width: 30%; /* Adjust service box width for side-by-side layout on wider screens */
-                margin: 0; /* Remove auto margins, use space-around for spacing */
-            }
-            #psum {
-                flex-direction: row; /* Arrange projects in a row on wider screens */
-                justify-content: space-around; /* Distribute space evenly */
-                align-items: stretch; /* **Make project boxes stretch to equal height** */
-            }
-             #calc, #grade {
-                width: 45%; /* Adjust project box width for side-by-side layout on wider screens */
-                margin: 0;
-            }
-        }
-
-        /* Smaller screen adjustments (optional - adjust as needed) */
-        @media (max-width: 480px) {
-            #name {
-                font-size: 1.5rem; /* Smaller font on very small screens */
-            }
-            #namedesc {
-                font-size: 0.9rem; /* Smaller font on very small screens */
-            }
-            #cvdown{
-                font-size: 0.8rem;
-                padding: 8px 16px;
-            }
-        }
-        #calctext1, #calctext2, #gradetext1, #gradetext2, #finald1, #finald2{
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-        #gradehead, #calchead, #finalt{
-            text-decoration: underline;
-            color: orangered;
-        }
-        #proj1, #proj2, #proj3{
+        #view {
             background-color: orangered;
             border: none;
+            height: 2rem;
             color: white;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            height: 30px;
             cursor: pointer;
+            font-size: 1rem;
+            padding: 0 1rem;
         }
-        #rest{
-            color: black;
-            margin-top: 20%;
-            font-size: xx-large;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            animation: appear linear;
-            animation-timeline: view();
-            animation-range: entry 0% cover 40%;
+        #awards {
+            margin: 8vw 2vw 0 2vw;
         }
-        #resume{
-            margin-left: 10px;
-        }
-        #contact{
-            margin-top: 20%;
+        #awd {
             display: flex;
-            grid-gap: 20px;
+            flex-direction: column;
+            gap: 2vw;
+        }
+        #cs, #wd {
+            width: 90vw;
+            max-width: 400px;
+            border: 2px solid orangered;
+            padding: 1rem;
+            margin-top: 2vw;
+            box-sizing: border-box;
+        }
+        #skills {
+            margin: 8vw 2vw 0 2vw;
+        }
+        #skill {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1vw;
+            margin-top: 1rem;
+        }
+        #skill p {
+            min-width: 90px;
+            padding: 0.5rem 1rem;
+            background: #f7f7f7;
+            border-radius: 4px;
+            margin: 0;
+            font-size: 1rem;
+            text-align: center;
+            border: orangered 1px solid;
+        }
+        #skill p:hover {
+            transform: scale(1.08);
+            background: #ffe5d0;
+        }
+        #contact {
+            margin-top: 8vw;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
             align-items: center;
             justify-content: center;
             background-color: black;
-            height: 500px;
-            animation: appear linear;
-            animation-timeline: view();
-            animation-range: entry 0% cover 40%;
+            min-height: 200px;
+            padding: 2vw 0;
+        }
+        #contact a {
+            width: 50px;
+            height: 50px;
+            background-color: orangered;
+            display: flex;
+            border-radius: 50%;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 2rem;
+            transition: background 0.2s, transform 0.2s;
         }
         #contact a:hover {
             background-color: #ff4500;
-            transform: translateY(-25px);
+            transform: translateY(-10px) scale(1.1);
         }
-        #view{
-            background-color: orangered;
-            border: none;
-            height: 30px;
-            color: white;
-            cursor: pointer;
-            animation: appear1 linear;
-            animation-timeline: view();
-            animation-range: entry 0% cover 40%;
+        /* Responsive Breakpoints */
+        @media (min-width: 768px) {
+            #aboutdesc {
+                flex-direction: row;
+                align-items: stretch;
+            }
+            #ades {
+                width: 40%;
+                max-width: 400px;
+                margin-right: 2vw;
+            }
+            #abouttext {
+                width: 60%;
+            }
+            #serdesc {
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: stretch;
+            }
+            #osi, #softw, #wifi {
+                width: 30vw;
+                max-width: 350px;
+                margin: 0;
+            }
+            #psum {
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: stretch;
+            }
+            #calc, #grade, #final {
+                width: 28vw;
+                max-width: 350px;
+                margin: 0;
+            }
+            #awd {
+                flex-direction: row;
+                justify-content: flex-start;
+            }
+            #cs, #wd {
+                width: 30vw;
+                max-width: 350px;
+            }
+            #skill {
+                gap: 2vw;
+            }
         }
-        #awards{
-            margin-top: 20%;
+        @media (max-width: 600px) {
+            #nav {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+                padding: 1rem 1vw;
+            }
+            #pass {
+                width: 60vw;
+                max-width: 160px;
+            }
+            #ades {
+                width: 90vw;
+                max-width: 180px;
+            }
+            #osi, #softw, #wifi, #calc, #grade, #final, #cs, #wd {
+                width: 95vw;
+                max-width: 98vw;
+                padding: 0.7rem;
+            }
+            #skill p {
+                min-width: 70px;
+                font-size: 0.9rem;
+                padding: 0.3rem 0.5rem;
+            }
+            #contact a {
+                width: 40px;
+                height: 40px;
+                font-size: 1.3rem;
+            }
+        }
+        @media (max-width: 400px) {
+            #name, #rest, #myskills, #skillst, #awe, #aw {
+                font-size: 1.1rem !important;
+            }
+            #nav a {
+                font-size: 0.9rem;
+            }
+        }
+        #discover, #what, #myserv{
             margin-left: 20px;
         }
-        #cs{
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            width: 30%;
-            display: inline-block;
-            border: 2px solid orangered;
-            padding: 15px;
-            box-sizing: border-box;
-            margin-top: 20px;
-            animation: appear linear;
-            animation-timeline: view();
-            animation-range: entry 0% cover 40%;
-            animation: appear2 linear;
-            animation-timeline: view();
-            animation-range: entry 0% cover 40%;
-        }
-        #wd{
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            width: 30%;
-            display: inline-block;
-            border: 2px solid orangered;
-            padding: 15px;
-            box-sizing: border-box;
-            margin-top: 20px;
-            animation: appear1 linear;
-            animation-timeline: view();
-            animation-range: entry 0% cover 40%;
-            animation: appear2 linear;
-            animation-timeline: view();
-            animation-range: entry 0% cover 40%;
-        }
-        #ndiritu, #ak{
-            background-color: orangered;
+        #proj1, #proj2, #proj3{
             border: none;
-            color: white;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: orangered;
             height: 30px;
             cursor: pointer;
-            animation: appear2 linear;
-            animation-timeline: view();
-            animation-range: entry 0% cover 40%;
-        }
-        #skills{
-            margin-top: 20%;
-        }
-        #fb, #ig, #li, #gith, #yt, #tw, #gm, #ph, #wh{
-            width: 70px;
-            height: 70px;
-            background-color: orangered;
-            display: inline-flex;
-            border-radius: 100px;
-            justify-content: center;
-            align-items: center;
-        }
-        #skill{
-            color: black;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            margin-left: 10px;
-            display: inline-flex;
-            gap: 10px;
-        }
-        #htm, #css, #git, #see, #javas, #sq, #dsa, #unity{
-            width: 100px;
-            height: 60px;
-            border: orangered, 1px solid;
-            align-items: center;
-            justify-content: center;
-            display: grid;
-            border-radius: 2px;
-        }
-        #skill p:hover{
-            transform: scale(1.1)
-        }
-        #awe{
-            color: orangered;
-            font-size: xx-large;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
-        #aw{
-           color: black;
-           font-size: xx-large;
-           font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
-        }
-        #skillst{
-             color: orangered;
-             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-             font-size: xx-large;
-             animation: appear linear;
-            animation-timeline: view();
-            animation-range: entry 0% cover 40%;
-        }
-        #myskills{
-            font-size: xx-large;
-            animation: appear1 linear;
-            animation-timeline: view();
-            animation-range: entry 0% cover 40%;
+        #pdes, #summary, #wdd, #csd, #services, #projects, #awrds, #skills{
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-        #skills{
-            margin-left: 20px;
-        }
-        #htm, #css, #git, #see{
-             animation: appear1 linear;
-            animation-timeline: view();
-            animation-range: entry 0% cover 40%;
-            animation: appear2 linear;
-            animation-timeline: view();
-            animation-range: entry 0% cover 40%;
-        }
-        #javas, #sq, #dsa, #unity{
-            animation: appear linear;
-            animation-timeline: view();
-            animation-range: entry 0% cover 40%;
-            animation: appear2 linear;
-            animation-timeline: view();
-            animation-range: entry 0% cover 40%;
-            
         }
     </style>
 </head>
@@ -567,11 +416,11 @@
     </section>
 
     <section id="about">
-        <p id="discover"><strong>discover</strong></p>
+        <p id="discover" style="color: orangered; font-size: x-large; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"><strong>discover</strong></p>
         <div id="aboutdesc">
             <img src="WIN_20250517_18_12_00_Pro.jpg" alt="" id="ades">
             <div id="abouttext">
-                <p id="atitle"><strong>About Me</strong></p>
+                <p id="atitle" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"><strong>About Me</strong></p>
                 <p id="pdes">My name is Abel Kihara a student in Kirinyaga University, based in Kutus Kirinyaga county. I'm passionate and dedicated to my work and I'm an expirienced frontend developer. I have developed and acquired necessary skills to build great and premium websites. </p>
                 <section id="summary">
                     <p id="sumname">Name: Abel Kihara Ndiritu</p>
@@ -590,33 +439,29 @@
 
     <section id="services">
         <section id="stext">
-            <p id="what"><strong>What I Do</strong></p>
-            <p id="myserv"><strong>My Services</strong></p>
+            <p id="what" style="color: orangered; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: xx-large;"><strong>What I Do</strong></p>
+            <p id="myserv" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"><strong>My Services</strong></p>
         </section>
         <div id="serdesc">
             <section id="osi">
-                <p id="osit"><strong>Operating System Installation</strong></p>
+                <p id="osit" style="color: orangered; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; text-align: left; font-size: xx-large;">Operating System Installation</p>
                 <p id="ost">I install any operating system on computers including: windows & Linux operating systems</p>
             </section>
 
-            <section id="softw">
-                <p id="soft">Software maintenace and trouble shooting🛠️🔧</p>
+            <section id="softw" >
+                <p id="soft" style="color: orangered; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; text-align: left; font-size: xx-large;">Software maintenace and trouble shooting🛠️🔧</p>
                 <p id="softt">Office installation and activation</p>
             </section>
 
-            <section id="wifi">
-                <p id="wifititle">wifi installation🛜🛜🛜🛜</p>
-                <p id="wif">we set up your home wifi wherever you are located</p>
-            </section>
         </div>
     </section>
 
     <section id="projects">
-        <section id="projt"><strong>What I Have Done</strong> </section>
-        <p id="myprojects"><strong>My Projects</strong></p>
+        <section id="projt" style="color: orangered; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; text-align: left; font-size: xx-large;"><strong>What I Have Done</strong> </section>
+        <p id="myprojects" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; text-align: left;"><strong>My Projects</strong></p>
         <section id="psum">
             <section id="calc">
-                <p id="calchead" style="font-size: x-large;">Simple Calculator</p>
+                <p id="calchead" style="font-size: x-large; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: orangered; font-size: xx-large;">Simple Calculator</p>
                 <p id="calctext1">I have built a simple mathematical calculator</p>
                 <div id="view1">
                         <a href="calcboulder.netlify.app">
@@ -626,7 +471,7 @@
             </section>
 
             <section id="grade">
-                <p id="gradehead">Grade Calculator</p>
+                <p id="gradehead" style="font-size: x-large; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: orangered; font-size: xx-large;">Grade Calculator</p>
                 <p id="gradetext1">I have also built a simple grade calculator that calculates the marks for each test and displays the mean marks and the mean grade for each unit</p>
                 <div id="view2">
                         <a href="mygradecalculator1.netlify.app">
@@ -636,7 +481,7 @@
             </section>
 
             <section id="final">
-                <p id="finalt" style="font-size: x-large;"><strong>e-commerce website</strong></p>
+                <p id="finalt" style="font-size: x-large; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: orangered; font-size: xx-large;">e-commerce website</p>
                 <p id="finald1">I have built an e-commerce website that lets the user know the items added to cart and displays the sum of the amont of goods bought</p>
                 <div id="view3">
                         <a href="abelfinalproject.netlify.app">
@@ -649,7 +494,7 @@
 
 
 
-    <section id="resume">
+    <section id="resume" style="text-align: left; margin-left: 20px;">
             <p id="rest"><strong>view my resume</strong> </p>
             <a href="my cv.pdf">
                 <button id="view">view my cv</button>
@@ -658,19 +503,19 @@
 
 
 
-    <section id="awards">
-        <p id="awe"><strong>what I have earned</strong></p>
+    <section id="awards" style="margin-left: 20px;">
+        <p id="awe" style="font-size: x-large; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: orangered; font-size: xx-large;"><strong>what I have earned</strong></p>
         <p id="aw"><strong>awards</strong></p>
            <section id="awd">
                <section id="cs">
-                  <p id="cst"><strong>ICT Authority of Kenya</strong></p>
+                  <p id="cst" style="font-size: x-large; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: orangered; font-size: xx-large;"><strong>ICT Authority of Kenya</strong></p>
                   <p id="csd"> After completing my learning in cyber security I earned a certificate after completion</p>
                    <a href="abelkihara8gmail-com-3535-3546-20250325-e0d954d4d4.pdf">
                          <button id="ak">view achievement</button>
                    </a>             
                 </section>
                <section id="wd">
-                   <p id="wdt"><strong>Computer Society of Kirinyaga (CSK)</strong> </p>
+                   <p id="wdt" style="font-size: x-large; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: orangered; font-size: xx-large;"><strong>Computer Society of Kirinyaga (CSK)</strong> </p>
                    <p id="wdd">This is a club found in Kirinyaga University that deals in technology. Through this, I earned a certificate as being one of the most active members in the club. I also earned a certificate in participating in web development after passing all mymodules.</p>
                     <a href="Ndiritu Abel Kihara certificate.pdf">
                         <button id="ndiritu">view achievement</button>
@@ -681,14 +526,15 @@
 
 
 
-    <section id="skills">
-        <p id="skillst">what I know</p>
+    <section id="skills" style="margin-left: 20px;">
+        <p id="skillst" style="font-size: x-large; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: orangered; font-size: xx-large;">what I know</p>
         <p id="myskills"><strong>My Skills</strong></p>
         <section id="skill">
             <p id="htm">HTML5</p>
             <p id="css">CSS3</p>
             <P id="git">Git and GitHub</P>
             <P id="see">C</P>
+            <p id="py">python</p>
             <P id="javas">Java Script</P>
             <p id="sq">SQL</p>
             <P id="dsa">Data Structures and Algorithms</P>
@@ -699,39 +545,39 @@
 
     <section id="contact">
         <section id="facebook">
-            <a href="#" class="fa fa-facebook" id="fb"></a>
+            <a href="https://www.facebook.com/abel.ndiritu" class="fa fa-facebook" id="fb"></a>
         </section>
 
         <section id="linkedin">
-        <a href="#" class="fa fa-linkedin" id="li"></a>
+        <a href="https://www.linkedin.com/in/abel-kihara-87ab86325?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="fa fa-linkedin" id="li"></a>
         </section>
 
         <section id="instagram">
-                    <a href="#" class="fa fa-instagram" id="ig"></a>
+                    <a href="https://www.instagram.com/theboulder2024?igsh=MW0zdHBwMHdpczdnMw==" class="fa fa-instagram" id="ig"></a>
         </section>
 
         <section id="github">
-                    <a href="#" class="fa fa-github" id="gith"></a>
+                    <a href="https://github.com/Boulder1-kihara" class="fa fa-github" id="gith"></a>
         </section>
 
         <section id="youtube">
-                    <a href="#" class="fa fa-youtube" id="yt"></a>
+                    <a href="https://youtube.com/@theboulder-c5r?si=gXmNGb_IW5VnCy_x" class="fa fa-youtube" id="yt"></a>
         </section>
 
         <section id="twitter">
-                    <a href="#" class="fa fa-twitter" id="tw"></a>
+                    <a href="https://x.com/TheBoulder73572?s=09" class="fa fa-twitter" id="tw"></a>
         </section>
 
         <section id="envelope">
-                    <a href="#" class="fa fa-envelope" id="gm"></a>
+                    <a href="mailto: abelkihara8@gmail.com" class="fa fa-envelope" id="gm"></a>
         </section>
 
         <section id="phone">
-                    <a href="#" class="fa fa-phone" id="ph"></a>
+                    <a href="tel:+254708692989" class="fa fa-phone" id="ph"></a>
         </section>
 
         <section id="whatsapp">
-                    <a href="#" class="fa fa-whatsapp" id="wh"></a>
+                    <a href="https://whatsapp.com/dl/" class="fa fa-whatsapp" id="wh"></a>
         </section>
     </section>
 </body>
