@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abel Kihara</title>
-    <!-- Remove incorrect stylesheet link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/font-awesome.min.css">
 
@@ -203,7 +202,7 @@
             align-items: center;
             gap: 2vw;
         }
-        #calc, #grade, #final {
+        #calc, #grade, #final, #calender { /* Added #calender here */
             width: 90vw;
             max-width: 400px;
             margin: 1rem auto;
@@ -325,7 +324,7 @@
                 justify-content: space-around;
                 align-items: stretch;
             }
-            #calc, #grade, #final, alender{
+            #calc, #grade, #final, #calender { /* Added #calender here as well */
                 width: 28vw;
                 max-width: 350px;
                 margin: 0;
@@ -357,7 +356,7 @@
                 width: 90vw;
                 max-width: 180px;
             }
-            #osi, #softw, #wifi, #calc, #grade, #final, #cs, #wd {
+            #osi, #softw, #wifi, #calc, #grade, #final, #cs, #wd, #calender { /* Added #calender here too */
                 width: 95vw;
                 max-width: 98vw;
                 padding: 0.7rem;
@@ -394,9 +393,12 @@
         #pdes, #summary, #wdd, #csd, #services, #projects, #awrds, #skills{
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
+        /* The incorrect rule below was removed */
+        /*
         #proj4{
             border: 1px, solid, orange-red;
             {
+        */
     </style>
 </head>
 <body>
@@ -521,18 +523,18 @@
         <p id="aw"><strong>awards</strong></p>
            <section id="awd">
                <section id="cs">
-                  <p id="cst" style="font-size: x-large; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: orangered; font-size: xx-large;"><strong>ICT Authority of Kenya</strong></p>
-                  <p id="csd"> After completing my learning in cyber security I earned a certificate after completion</p>
-                   <a href="https://mail.google.com/mail/u/0?ui=2&ik=0c8e6594b9&attid=0.1&permmsgid=msg-f:1827559234983419017&th=195ccb70ff2bdc89&view=att&zw&disp=inlinef">
-                         <button id="ak">view achievement</button>
-                   </a>             
+                    <p id="cst" style="font-size: x-large; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: orangered; font-size: xx-large;"><strong>ICT Authority of Kenya</strong></p>
+                    <p id="csd"> After completing my learning in cyber security I earned a certificate after completion</p>
+                       <a href="https://mail.google.com/mail/u/0?ui=2&ik=0c8e6594b9&attid=0.1&permmsgid=msg-f:1827559234983419017&th=195ccb70ff2bdc89&view=att&zw&disp=inlinef">
+                            <button id="ak">view achievement</button>
+                       </a>           
                 </section>
                <section id="wd">
-                   <p id="wdt" style="font-size: x-large; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: orangered; font-size: xx-large;"><strong>Computer Society of Kirinyaga (CSK)</strong> </p>
-                   <p id="wdd">This is a club found in Kirinyaga University that deals in technology. Through this, I earned a certificate as being one of the most active members in the club. I also earned a certificate in participating in web development after passing all mymodules.</p>
-                    <a href="https://mail.google.com/mail/u/0?ui=2&ik=0c8e6594b9&attid=0.1&permmsgid=msg-f:1827847699821009203&th=195dd1cc73589933&view=att&zw&disp=inline">
-                        <button id="ndiritu">view achievement</button>
-                    </a>
+                    <p id="wdt" style="font-size: x-large; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: orangered; font-size: xx-large;"><strong>Computer Society of Kirinyaga (CSK)</strong> </p>
+                    <p id="wdd">This is a club found in Kirinyaga University that deals in technology. Through this, I earned a certificate as being one of the most active members in the club. I also earned a certificate in participating in web development after passing all mymodules.</p>
+                     <a href="https://mail.google.com/mail/u/0?ui=2&ik=0c8e6594b9&attid=0.1&permmsgid=msg-f:1827847699821009203&th=195dd1cc73589933&view=att&zw&disp=inline">
+                            <button id="ndiritu">view achievement</button>
+                     </a>
                 </section>
            </section>
     </section>
