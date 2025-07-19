@@ -454,6 +454,62 @@ body.dark {
 #skill p.dark:hover {
     transform: scale(1.08); /* Keep the hover effect */
 }
+/* Styling for each skill item (icon + text) */
+.skill-item {
+    display: flex;
+    align-items: center; /* Vertically align icon and text */
+    gap: 8px; /* Space between icon and text */
+    padding: 0.7rem 1.2rem; /* Increased padding for better touch target */
+    background: #f7f7f7;
+    border-radius: 8px; /* Slightly more rounded */
+    border: orangered 1px solid;
+    font-size: 1.1rem; /* Slightly larger font */
+    transition: transform 0.2s ease-in-out, background 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.skill-item:hover {
+    transform: translateY(-3px) scale(1.05); /* Lift and slight scale on hover */
+    background: #ffe5d0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Stronger shadow on hover */
+}
+
+.skill-item i {
+    font-size: 1.5em; /* Adjust icon size relative to text */
+    line-height: 1; /* Ensure proper vertical alignment */
+    color: inherit; /* Inherit color from parent for icons without specific color */
+}
+
+.skill-item p {
+    margin: 0; /* Remove default paragraph margin */
+    font-weight: 500; /* Make skill text a bit bolder */
+}
+
+        /* Specific colors for each icon */
+        .fab.fa-html5 { color: #E44D26; /* HTML5 orange */ }
+        .fab.fa-css3 { color: #264DE4; /* CSS3 blue */ }
+        .fab.fa-js { color: #F7DF1E; /* JavaScript yellow */ }
+        .fab.fa-python { color: #3776AB; /* Python blue */ }
+        .fab.fa-flutter { color: #02569B; /* Flutter blue */ }
+        .fab.fa-unity { color: #000000; /* Unity black */ }
+        .fab.fa-github { color: #181717; /* GitHub black */ }
+        .fas.fa-database { color: #4479A1; /* SQL/Database blue */ }
+        .fas.fa-code { color: #007ACC; /* General code blue */ } /* For Data Structures and Algorithms */
+
+        body.dark-mode #skill .skill-item {
+    background-color: #3a3a3a; /* Darker background for skill items */
+    color: white;
+    border-color: orangered;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+body.dark-mode #skill .skill-item:hover {
+    background-color: #5a5a5a; /* Even darker on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+body.dark-mode #skill p {
+    color: white; /* Ensure skill text is white in dark mode */
+}
     </style>
 </head>
 <body>
