@@ -4,101 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abel Kihara</title>
-    <!-- IMPORTANT: Ensure this is the ONLY Font Awesome link in your head section -->
-    <!-- This links to Font Awesome 6.4.0, which includes the 'fab' (brands) and 'fas' (solid) icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/font-awesome.min.css">
 
     <style>
-        /* Keyframe animations (kept as in original, though not directly applied to all elements) */
         @keyframes appear {
-            from { opacity: 0; transform: translateX(100px); }
-            to { opacity: 1; transform: translateX(0); }
+            from{
+                opacity: 1;
+                transform: translatex(100px);
+            }
+            to{
+                opacity: 1;
+                transform: scale(0px);
+            }
         }
         @keyframes appear1 {
-            from { opacity: 0; transform: translateX(-100px); }
-            to { opacity: 1; transform: translateX(0); }
+            from{
+                opacity: 1;
+                transform: translatex(-100px);
+            }
+            to{
+                opacity: 1;
+                transform: scale(0px);
+            }
         }
         @keyframes appear2 {
-            from { opacity: 0; scale: 0.5; transform: translateX(-100px); }
-            to { opacity: 1; scale: 1; transform: translateX(0); }
+            from{
+                opacity: 1;
+                scale: 0.5;
+                transform: translateX(-100px);
+            }
+            to{
+                opacity: 1;
+                scale: 1;
+                transform: scale(0px);
+            }
         }
-
-        /* Base styles */
         html, body {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-size: 16px;
-            scroll-behavior: smooth; /* Smooth scrolling for navigation */
         }
         body {
             width: 100vw;
             min-height: 100vh;
             overflow-x: hidden;
-            background-color: white;
-            color: black;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
-        
-        /* Dark mode styles */
-        body.dark-mode {
-            background-color: #1a1a1a; /* Dark background */
-            color: white; /* White text */
-        }
-        body.dark-mode #nav,
-        body.dark-mode #passdesc,
-        body.dark-mode #abouttext,
-        body.dark-mode #summary,
-        body.dark-mode #osi,
-        body.dark-mode #softw,
-        body.dark-mode #calc,
-        body.dark-mode #grade,
-        body.dark-mode #calender,
-        body.dark-mode #final,
-        body.dark-mode #cs,
-        body.dark-mode #wd {
-            background-color: #2a2a2a; /* Slightly lighter dark for sections */
-            color: white;
-            border-color: orangered; /* Keep orange border visible */
-        }
-        body.dark-mode #nav a,
-        body.dark-mode #contact a {
-            color: white; /* Ensure links are visible in dark mode */
-        }
-        body.dark-mode .skill-item { /* Changed from #skill .skill-item to .skill-item for better specificity */
-            background-color: #3a3a3a; /* Darker background for skill items */
-            color: white;
-            border-color: orangered;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-        }
-        body.dark-mode .skill-item:hover {
-            background-color: #5a5a5a; /* Even darker on hover */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-        }
-        body.dark-mode .skill-item p { /* Ensure text inside skill item is white */
-            color: white;
-        }
-
-
-        /* General button styles */
-        #ak, #ndiritu, #proj1, #proj2, #proj3, #proj4, #cvdown, #view {
+        #ak, #ndiritu{
             background-color: orangered;
             border: none;
-            height: 35px; /* Slightly increased height */
-            padding: 0 15px; /* Added padding */
+            height: 30px;
             cursor: pointer;
-            font-family: inherit; /* Inherit font from body */
-            color: white;
-            border-radius: 5px; /* Slightly rounded corners */
-            transition: background-color 0.3s ease, transform 0.2s ease;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
-        #ak:hover, #ndiritu:hover, #proj1:hover, #proj2:hover, #proj3:hover, #proj4:hover, #cvdown:hover, #view:hover {
-            background-color: #ff4500; /* Darker orange on hover */
-            transform: translateY(-2px); /* Slight lift effect */
+        a {
+            text-decoration: none;
+            margin-right: 5vw;
+            color: black;
+            cursor: pointer;
         }
-
-        /* Navigation styles */
         #nav {
             display: flex;
             flex-wrap: wrap;
@@ -106,78 +71,55 @@
             justify-content: flex-end;
             align-items: center;
             padding: 1rem 2vw;
-            gap: 1.5rem; /* Increased gap */
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for nav */
-            position: sticky; /* Make nav sticky */
-            top: 0;
-            z-index: 1000; /* Ensure nav is on top */
+            gap: 1rem;
         }
         #nav a {
-            text-decoration: none;
-            color: black;
-            cursor: pointer;
-            font-size: 1.1rem; /* Slightly larger font */
-            font-weight: 500;
-            transition: color 0.3s ease;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
         }
-        #nav a:hover {
-            color: orangered; /* Orange on hover */
-        }
-        #nav label {
-            margin-left: auto; /* Push toggle to the right */
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.9rem;
-        }
-        #nav input[type="checkbox"] {
-            cursor: pointer;
-            width: 20px;
-            height: 20px;
-        }
-
-        /* Profile picture and description */
         #pass {
             display: block;
             margin: 8vw auto 0 auto;
             width: 40vw;
             max-width: 220px;
             height: auto;
-            border: 3px solid orangered; /* Thicker border */
+            border: 2px solid orangered;
             border-radius: 50%;
-            object-fit: cover; /* Ensure image covers the circle */
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Stronger shadow */
         }
         #passdesc {
             text-align: center;
             padding: 1rem;
         }
         #name {
-            font-size: 2.5rem; /* Larger font size */
+            font-size: 2rem;
             color: orangered;
             text-transform: uppercase;
-            margin-bottom: 0.5rem;
+            font-family: system-ui, sans-serif;
+             @keyframes appear1 {
+            from{
+                opacity: 1;
+                transform: translatex(100px);
+            }
+            to{
+                opacity: 1;
+                transform: scale(0px);
+            }
+        }
         }
         #namedesc {
             color: black;
-            font-size: 1.2rem;
+            font-family: system-ui, sans-serif;
+             @keyframes appear {
+            from{
+                opacity: 1;
+                transform: translatex(100px);
+            }
+            to{
+                opacity: 1;
+                transform: scale(0px);
+            }
         }
-
-        /* About section */
-        #discover, #what, #myserv, #projt, #myprojects, #rest, #awe, #aw, #skillst, #myskills {
-            color: orangered;
-            font-size: 2.2rem; /* Consistent large heading size */
-            margin-left: 20px;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            font-weight: bold;
         }
-        #myserv, #myprojects, #aw, #myskills {
-            color: black; /* Sub-headings in black */
-            font-size: 1.8rem;
-            margin-top: 0.5rem;
-        }
-
         #aboutdesc {
             display: flex;
             flex-direction: column;
@@ -190,38 +132,50 @@
             max-width: 300px;
             height: auto;
             border-radius: 10px;
-            object-fit: cover;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        #pdes{
+             @keyframes appear2 {
+            from{
+                opacity: 1;
+                transform: translatex(100px);
+            }
+            to{
+                opacity: 1;
+                transform: scale(0px);
+            }
+        }
         }
         #abouttext {
             width: 100%;
             box-sizing: border-box;
             padding: 1rem;
         }
-        #atitle {
-            font-size: 2rem;
-            color: orangered;
-            margin-bottom: 1rem;
-        }
-        #pdes {
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
         #summary {
             width: 100%;
             border: 2px solid orangered;
-            padding: 1.5rem; /* More padding */
-            margin-top: 1.5rem;
+            padding: 1rem;
+            margin-bottom: 1rem;
             box-sizing: border-box;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
-        #summary p {
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
+        #cvdown {
+            background-color: orangered;
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border: none;
+            cursor: pointer;
+            margin-top: 1rem;
+            font-size: 1rem;
+             @keyframes appear {
+            from{
+                opacity: 1;
+                transform: translatex(100px);
+            }
+            to{
+                opacity: 1;
+                transform: scale(0px);
+            }
         }
-
-        /* Services section */
+        }
         #serdesc {
             display: flex;
             flex-direction: column;
@@ -229,28 +183,14 @@
             gap: 2vw;
             padding: 1rem;
         }
-        #osi, #softw { /* Removed #wifi as it's not in HTML */
+        #osi, #softw, #wifi {
             width: 90vw;
             max-width: 400px;
             border: 1px solid orangered;
-            padding: 1.5rem;
+            padding: 1rem;
             margin: 0.5rem 0;
             box-sizing: border-box;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
-        #osit, #soft {
-            color: orangered;
-            font-size: 1.8rem;
-            text-align: left;
-            margin-bottom: 0.5rem;
-        }
-        #ost, #softt {
-            font-size: 1.1rem;
-            line-height: 1.5;
-        }
-
-        /* Projects section */
         #projects {
             margin-top: 10vw;
             padding: 2vw;
@@ -262,40 +202,33 @@
             align-items: center;
             gap: 2vw;
         }
-        #calc, #grade, #final, #calender {
+        #calc, #grade, #final, #calender { /* Added #calender here */
             width: 90vw;
             max-width: 400px;
             margin: 1rem auto;
             border: 1px solid orangered;
-            padding: 1.5rem;
+            padding: 1rem;
             box-sizing: border-box;
             text-align: left;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
-        #calchead, #gradehead, #finalt {
-            font-size: 1.8rem;
-            color: orangered;
-            margin-bottom: 0.5rem;
-        }
-        #calctext1, #gradetext1, #calender1, #finald1 {
-            font-size: 1.1rem;
-            line-height: 1.5;
-            margin-bottom: 1rem;
-        }
-
-        /* Resume section */
         #resume {
             margin: 4vw 0;
             text-align: center;
-            padding: 0 20px; /* Add padding for small screens */
         }
         #rest {
-            font-size: 2.2rem;
+            color: black;
+            font-size: 2rem;
             margin-bottom: 1rem;
         }
-
-        /* Awards section */
+        #view {
+            background-color: orangered;
+            border: none;
+            height: 2rem;
+            color: white;
+            cursor: pointer;
+            font-size: 1rem;
+            padding: 0 1rem;
+        }
         #awards {
             margin: 8vw 2vw 0 2vw;
         }
@@ -308,85 +241,38 @@
             width: 90vw;
             max-width: 400px;
             border: 2px solid orangered;
-            padding: 1.5rem;
+            padding: 1rem;
             margin-top: 2vw;
             box-sizing: border-box;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
-        #cst, #wdt {
-            font-size: 1.8rem;
-            color: orangered;
-            margin-bottom: 0.5rem;
-        }
-        #csd, #wdd {
-            font-size: 1.1rem;
-            line-height: 1.5;
-            margin-bottom: 1rem;
-        }
-
-        /* Skills section */
         #skills {
             margin: 8vw 2vw 0 2vw;
         }
         #skill {
             display: flex;
             flex-wrap: wrap;
-            gap: 15px; /* Increased gap for better spacing with icons */
-            margin-top: 1.5rem;
-            justify-content: center; /* Center the skill items */
-            padding: 1rem; /* Add padding */
+            gap: 1vw;
+            margin-top: 1rem;
         }
-
-        /* Styling for each skill item (icon + text) */
-        .skill-item {
-            display: flex;
-            align-items: center; /* Vertically align icon and text */
-            gap: 8px; /* Space between icon and text */
-            padding: 0.7rem 1.2rem; /* Increased padding for better touch target */
+        #skill p {
+            min-width: 90px;
+            padding: 0.5rem 1rem;
             background: #f7f7f7;
-            border-radius: 8px; /* Slightly more rounded */
+            border-radius: 4px;
+            margin: 0;
+            font-size: 1rem;
+            text-align: center;
             border: orangered 1px solid;
-            font-size: 1.1rem; /* Slightly larger font */
-            transition: transform 0.2s ease-in-out, background 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
-            white-space: nowrap; /* Prevent text from wrapping */
         }
-
-        .skill-item:hover {
-            transform: translateY(-3px) scale(1.05); /* Lift and slight scale on hover */
+        #skill p:hover {
+            transform: scale(1.08);
             background: #ffe5d0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Stronger shadow on hover */
         }
-
-        .skill-item i {
-            font-size: 1.5em; /* Adjust icon size relative to text */
-            line-height: 1; /* Ensure proper vertical alignment */
-            color: inherit; /* Inherit color from parent for icons without specific color */
-        }
-
-        .skill-item p {
-            margin: 0; /* Remove default paragraph margin */
-            font-weight: 500; /* Make skill text a bit bolder */
-        }
-
-        /* Specific colors for each icon */
-        .fab.fa-html5 { color: #E44D26; /* HTML5 orange */ }
-        .fab.fa-css3 { color: #264DE4; /* CSS3 blue */ }
-        .fab.fa-js { color: #F7DF1E; /* JavaScript yellow */ }
-        .fab.fa-python { color: #3776AB; /* Python blue */ }
-        .fab.fa-flutter { color: #02569B; /* Flutter blue */ }
-        .fab.fa-unity { color: #000000; /* Unity black */ }
-        .fab.fa-github { color: #181717; /* GitHub black */ }
-        .fas.fa-database { color: #4479A1; /* SQL/Database blue */ }
-        .fas.fa-code { color: #007ACC; /* General code blue */ } /* For Data Structures and Algorithms */
-
-        /* Contact section */
         #contact {
             margin-top: 8vw;
             display: flex;
             flex-wrap: wrap;
-            gap: 1.5rem; /* Increased gap */
+            gap: 1rem;
             align-items: center;
             justify-content: center;
             background-color: black;
@@ -394,22 +280,21 @@
             padding: 2vw 0;
         }
         #contact a {
-            width: 55px; /* Slightly larger icons */
-            height: 55px;
+            width: 50px;
+            height: 50px;
             background-color: orangered;
             display: flex;
             border-radius: 50%;
             justify-content: center;
             align-items: center;
             color: white;
-            font-size: 2.2rem; /* Larger icon size */
+            font-size: 2rem;
             transition: background 0.2s, transform 0.2s;
         }
         #contact a:hover {
             background-color: #ff4500;
-            transform: translateY(-8px) scale(1.1); /* Adjusted lift and scale */
+            transform: translateY(-10px) scale(1.1);
         }
-
         /* Responsive Breakpoints */
         @media (min-width: 768px) {
             #aboutdesc {
@@ -424,22 +309,36 @@
             #abouttext {
                 width: 60%;
             }
-            #serdesc, #psum, #awd { /* Combined for row layout */
+            #serdesc {
                 flex-direction: row;
                 justify-content: space-around;
                 align-items: stretch;
             }
-            #osi, #softw, #calc, #grade, #final, #calender, #cs, #wd {
-                width: 28vw; /* Adjusted width for 3 columns */
+            #osi, #softw, #wifi {
+                width: 30vw;
                 max-width: 350px;
                 margin: 0;
             }
-            #skill {
-                gap: 20px; /* Larger gap on desktop */
+            #psum {
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: stretch;
             }
-            .skill-item {
-                font-size: 1.2rem; /* Larger font for desktop */
-                padding: 0.8rem 1.5rem;
+            #calc, #grade, #final, #calender { /* Added #calender here as well */
+                width: 28vw;
+                max-width: 350px;
+                margin: 0;
+            }
+            #awd {
+                flex-direction: row;
+                justify-content: flex-start;
+            }
+            #cs, #wd {
+                width: 30vw;
+                max-width: 350px;
+            }
+            #skill {
+                gap: 2vw;
             }
         }
         @media (max-width: 600px) {
@@ -457,36 +356,104 @@
                 width: 90vw;
                 max-width: 180px;
             }
-            #osi, #softw, #calc, #grade, #final, #cs, #wd, #calender {
+            #osi, #softw, #wifi, #calc, #grade, #final, #cs, #wd, #calender { /* Added #calender here too */
                 width: 95vw;
                 max-width: 98vw;
                 padding: 0.7rem;
             }
-            .skill-item {
+            #skill p {
+                min-width: 70px;
                 font-size: 0.9rem;
-                padding: 0.5rem 0.8rem;
+                padding: 0.3rem 0.5rem;
             }
             #contact a {
-                width: 45px;
-                height: 45px;
-                font-size: 1.8rem;
-            }
-            #discover, #what, #myserv, #projt, #myprojects, #rest, #awe, #aw, #skillst, #myskills {
-                font-size: 1.8rem; /* Adjusted for smaller screens */
-                margin-left: 10px;
-            }
-            #myserv, #myprojects, #aw, #myskills {
-                font-size: 1.4rem;
+                width: 40px;
+                height: 40px;
+                font-size: 1.3rem;
             }
         }
         @media (max-width: 400px) {
             #name, #rest, #myskills, #skillst, #awe, #aw {
-                font-size: 1.5rem !important; /* Smaller headings on very small screens */
+                font-size: 1.1rem !important;
             }
             #nav a {
                 font-size: 0.9rem;
             }
         }
+        #discover, #what, #myserv{
+            margin-left: 20px;
+        }
+        #proj1, #proj2, #proj3, #proj4{
+            border: none;
+            background-color: orangered;
+            height: 30px;
+            cursor: pointer;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        #pdes, #summary, #wdd, #csd, #services, #projects, #awrds, #skills{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        /* The incorrect rule below was removed */
+        /*
+        #proj4{
+            border: 1px, solid, orange-red;
+            {
+        */
+    body {
+        background-color: white;
+        transition: background-color 0.3s ease, color 0.3s ease;
+}
+    #nav.dark, #namedesc.dark, #pdes.dark, #summary.dark{
+    background-color: black;
+    color: white;
+}
+/* Add this to your <style> block */
+body.dark {
+    background-color: black;
+    color: white;
+}
+
+#nav.dark,
+#namedesc.dark,
+#pdes.dark,
+#summary.dark,
+#osi.dark, /* Add other sections you want to turn dark */
+#softw.dark,
+#calc.dark,
+#grade.dark,
+#calender.dark,
+#final.dark,
+#cs.dark,
+#wd.dark {
+    background-color: black;
+    color: white;
+    border-color: orangered; /* Ensure borders are still visible */
+}
+
+/* Also, ensure your 'a' tags (links) inside dark sections adjust their color */
+#nav.dark a,
+#namedesc.dark a,
+#pdes.dark a,
+#summary.dark a,
+#osi.dark a,
+#softw.dark a,
+#calc.dark a,
+#grade.dark a,
+#calender.dark a,
+#final.dark a,
+#cs.dark a,
+#wd.dark a {
+    color: white; /* Or a light color that contrasts with black */
+}
+#skill p.dark {
+    color: black; /* White text for better contrast */
+    border-color: orangered; /* Keep the orange border */
+}
+
+/* Ensure hover states also adapt in dark mode */
+#skill p.dark:hover {
+    transform: scale(1.08); /* Keep the hover effect */
+}
     </style>
 </head>
 <body>
@@ -501,11 +468,10 @@
             <a href="#skills">skills</a>
             <a href="#contact">contact</a>
 
-            <label for="dark-mode-toggle">dark/light mode</label>
-            <input type="checkbox" id="dark-mode-toggle">
+            <label for="toggle">dark/light mode</label>
+            <input type="checkbox">
         </section>
-        <!-- Placeholder image for WIN_20250517_18_12_00_Pro.jpg -->
-        <img src="https://placehold.co/220x220/FFA500/FFFFFF?text=Abel" alt="Abel Kihara Profile" id="pass">
+        <img src="WIN_20250517_18_12_00_Pro.jpg" alt="" id="pass">
         <section id="passdesc">
             <p id="name"><strong>Abel Kihara Ndiritu</strong></p>
             <p id="namedesc">A dedicated mobile app developer & a responsive front end web developer</p>
@@ -513,17 +479,16 @@
     </section>
 
     <section id="about">
-        <p id="discover"><strong>discover</strong></p>
+        <p id="discover" style="color: orangered; font-size: x-large; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"><strong>discover</strong></p>
         <div id="aboutdesc">
-            <!-- Placeholder image for WIN_20250517_18_12_00_Pro.jpg -->
-            <img src="https://placehold.co/300x200/FFA500/FFFFFF?text=About+Me" alt="About Me" id="ades">
+            <img src="WIN_20250517_18_12_00_Pro.jpg" alt="" id="ades">
             <div id="abouttext">
-                <p id="atitle"><strong>About Me</strong></p>
-                <p id="pdes">My name is Abel Kihara, a student in Kirinyaga University, based in Kutus, Kirinyaga county. I'm passionate and dedicated to my work and I'm an experienced frontend developer. I have developed and acquired necessary skills to build great and premium websites.</p>
+                <p id="atitle" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: #ff4500;" ><strong>About Me</strong></p>
+                <p id="pdes">My name is Abel Kihara a student in Kirinyaga University, based in Kutus Kirinyaga county. I'm passionate and dedicated to my work and I'm an expirienced frontend developer. I have developed and acquired necessary skills to build great and premium websites. </p>
                 <section id="summary">
                     <p id="sumname">Name: Abel Kihara Ndiritu</p>
                     <p id="sumage">Age: 19 years</p>
-                    <p id="sumexp">Experience: 2 years</p>
+                    <p id="sumexp">expirience: 2 years</p>
                     <p id="frexp">Freelance: Available</p>
                     <div id="download">
                         <a href="my cv.pdf" download="my cv">
@@ -537,177 +502,159 @@
 
     <section id="services">
         <section id="stext">
-            <p id="what"><strong>What I Do</strong></p>
-            <p id="myserv"><strong>My Services</strong></p>
+            <p id="what" style="color: orangered; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: xx-large;"><strong>What I Do</strong></p>
+            <p id="myserv" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"><strong>My Services</strong></p>
         </section>
         <div id="serdesc">
             <section id="osi">
-                <p id="osit">Operating System Installation</p>
+                <p id="osit" style="color: orangered; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; text-align: left; font-size: xx-large;">Operating System Installation</p>
                 <p id="ost">I install any operating system on computers including: windows & Linux operating systems</p>
             </section>
 
-            <section id="softw">
-                <p id="soft">Software maintenance and troubleshooting 🛠️🔧</p>
+            <section id="softw" >
+                <p id="soft" style="color: orangered; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; text-align: left; font-size: xx-large;">Software maintenace and trouble shooting🛠️🔧</p>
                 <p id="softt">Office installation and activation</p>
             </section>
+
         </div>
     </section>
 
     <section id="projects">
-        <section id="projt"><strong>What I Have Done</strong></section>
-        <p id="myprojects"><strong>My Projects</strong></p>
+        <section id="projt" style="color: orangered; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; text-align: left; font-size: xx-large;"><strong>What I Have Done</strong> </section>
+        <p id="myprojects" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; text-align: left;"><strong>My Projects</strong></p>
         <section id="psum">
             <section id="calc">
-                <p id="calchead">Simple Calculator</p>
+                <p id="calchead" style="font-size: x-large; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: orangered; font-size: xx-large;">Simple Calculator</p>
                 <p id="calctext1">I have built a simple mathematical calculator</p>
                 <div id="view1">
-                    <a href="https://calcboulder.netlify.app/" target="_blank" rel="noopener noreferrer">
-                        <button id="proj1">view my project</button>
-                    </a>
-                </div>
+                        <a href="https://calcboulder.netlify.app/">
+                            <button id="proj1">view my project</button>
+                        </a>
+                    </div>
             </section>
 
             <section id="grade">
-                <p id="gradehead">Grade Calculator</p>
+                <p id="gradehead" style="font-size: x-large; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: orangered; font-size: xx-large;">Grade Calculator</p>
                 <p id="gradetext1">I have also built a simple grade calculator that calculates the marks for each test and displays the mean marks and the mean grade for each unit</p>
                 <div id="view2">
-                    <a href="https://mygradecalculator1.netlify.app/" target="_blank" rel="noopener noreferrer">
-                        <button id="proj2">view my project</button>
-                    </a>
-                </div>
+                        <a href="https://mygradecalculator1.netlify.app/">
+                            <button id="proj2">view my project</button>
+                        </a>
+                    </div>
             </section>
 
             <section id="calender">
-                <p id="gradehead">Dynamic Calendar</p>
-                <p id="calender1">I have also built a dynamic calendar using HTML, CSS and JavaScript</p>
+                <p id="gradehead" style="font-size: x-large; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: orangered; font-size: xx-large;">Dynamic Calender</p>
+                <p id="calender1">I have also built a dynamic calender using html, css and javascript</p>
                 <div id="view4">
-                    <a href="https://dynamiccalenders.netlify.app/" target="_blank" rel="noopener noreferrer">
-                        <button id="proj4">view my project</button>
-                    </a>
-                </div>
+                        <a href="https://dynamiccalenders.netlify.app/">
+                            <button id="proj4">view my project</button>
+                        </a>
+                    </div>
             </section>
 
             <section id="final">
-                <p id="finalt">E-commerce Website</p>
-                <p id="finald1">I have built an e-commerce website that lets the user know the items added to cart and displays the sum of the amount of goods bought</p>
+                <p id="finalt" style="font-size: x-large; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: orangered; font-size: xx-large;">e-commerce website</p>
+                <p id="finald1">I have built an e-commerce website that lets the user know the items added to cart and displays the sum of the amont of goods bought</p>
                 <div id="view3">
-                    <a href="https://abelfinalproject.netlify.app/" target="_blank" rel="noopener noreferrer">
-                        <button id="proj3">view my project</button>
-                    </a>
-                </div>
+                        <a href="https://abelfinalproject.netlify.app/">
+                            <button id="proj3">view my project</button>
+                        </a>
+                    </div>
             </section>
         </section>
     </section>
 
-    <section id="resume">
-        <p id="rest"><strong>view my resume</strong></p>
-        <a href="my cv.pdf" download="my cv">
-            <button id="view">view my cv</button>
-        </a>
+
+
+    <section id="resume" style="text-align: left; margin-left: 20px;">
+            <p id="rest"><strong>view my resume</strong> </p>
+            <a href="my cv.pdf">
+                <button id="view">view my cv</button>
+            </a>
     </section>
 
-    <section id="awards">
-        <p id="awe"><strong>what I have earned</strong></p>
+
+
+    <section id="awards" style="margin-left: 20px;">
+        <p id="awe" style="font-size: x-large; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: orangered; font-size: xx-large;"><strong>what I have earned</strong></p>
         <p id="aw"><strong>awards</strong></p>
-        <section id="awd">
-            <section id="cs">
-                <p id="cst"><strong>ICT Authority of Kenya</strong></p>
-                <p id="csd">After completing my learning in cyber security I earned a certificate after completion</p>
-                <a href="https://mail.google.com/mail/u/0?ui=2&ik=0c8e6594b9&attid=0.1&permmsgid=msg-f:1827559234983419017&th=195ccb70ff2bdc89&view=att&zw&disp=inlinef" target="_blank" rel="noopener noreferrer">
-                    <button id="ak">view achievement</button>
-                </a>
-            </section>
-            <section id="wd">
-                <p id="wdt"><strong>Computer Society of Kirinyaga (CSK)</strong></p>
-                <p id="wdd">This is a club found in Kirinyaga University that deals in technology. Through this, I earned a certificate as being one of the most active members in the club. I also earned a certificate in participating in web development after passing all my modules.</p>
-                <a href="https://mail.google.com/mail/u/0?ui=2&ik=0c8e6594b9&attid=0.1&permmsgid=msg-f:1827847699821009203&th=195dd1cc73589933&view=att&zw&disp=inline" target="_blank" rel="noopener noreferrer">
-                    <button id="ndiritu">view achievement</button>
-                </a>
-            </section>
-        </section>
+           <section id="awd">
+               <section id="cs">
+                    <p id="cst" style="font-size: x-large; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: orangered; font-size: xx-large;"><strong>ICT Authority of Kenya</strong></p>
+                    <p id="csd"> After completing my learning in cyber security I earned a certificate after completion</p>
+                       <a href="https://mail.google.com/mail/u/0?ui=2&ik=0c8e6594b9&attid=0.1&permmsgid=msg-f:1827559234983419017&th=195ccb70ff2bdc89&view=att&zw&disp=inlinef">
+                            <button id="ak">view achievement</button>
+                       </a>           
+                </section>
+               <section id="wd">
+                    <p id="wdt" style="font-size: x-large; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: orangered; font-size: xx-large;"><strong>Computer Society of Kirinyaga (CSK)</strong> </p>
+                    <p id="wdd">This is a club found in Kirinyaga University that deals in technology. Through this, I earned a certificate as being one of the most active members in the club. I also earned a certificate in participating in web development after passing all mymodules.</p>
+                     <a href="https://mail.google.com/mail/u/0?ui=2&ik=0c8e6594b9&attid=0.1&permmsgid=msg-f:1827847699821009203&th=195dd1cc73589933&view=att&zw&disp=inline">
+                            <button id="ndiritu">view achievement</button>
+                     </a>
+                </section>
+           </section>
     </section>
 
-    <section id="skills">
-        <p id="skillst">what I know</p>
+
+
+    <section id="skills" style="margin-left: 20px;">
+        <p id="skillst" style="font-size: x-large; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: orangered; font-size: xx-large;">what I know</p>
         <p id="myskills"><strong>My Skills</strong></p>
         <section id="skill">
-            <div class="skill-item">
-                <i class="fab fa-html5"></i>
-                <p>HTML5</p>
-            </div>
-            <div class="skill-item">
-                <i class="fab fa-css3"></i>
-                <p>CSS3</p>
-            </div>
-            <div class="skill-item">
-                <i class="fab fa-github"></i>
-                <p>Git and GitHub</p>
-            </div>
-            <div class="skill-item">
-                <i class="fab fa-flutter"></i>
-                <p>Flutter</p>
-            </div>
-            <div class="skill-item">
-                <i class="fab fa-python"></i>
-                <p>Python</p>
-            </div>
-            <div class="skill-item">
-                <i class="fab fa-js"></i>
-                <p>JavaScript</p>
-            </div>
-            <div class="skill-item">
-                <i class="fas fa-database"></i>
-                <p>SQL</p>
-            </div>
-            <div class="skill-item">
-                <i class="fas fa-code"></i>
-                <p>Data Structures and Algorithms</p>
-            </div>
-            <div class="skill-item">
-                <i class="fab fa-unity"></i>
-                <p>Unity XR Development</p>
-            </div>
+            <p id="htm">HTML5</p>
+            <p id="css">CSS3</p>
+            <P id="git">Git and GitHub</P>
+            <P id="see">C</P>
+            <P id="fl">flutter</P>
+            <p id="py">python</p>
+            <P id="javas">Java Script</P>
+            <p id="sq">SQL</p>
+            <P id="dsa">Data Structures and Algorithms</P>
+            <p id="unity">unity XR Development</p>
         </section>
+        
     </section>
 
     <section id="contact">
-        <a href="https://www.facebook.com/abel.ndiritu" class="fa fa-facebook" id="fb" target="_blank" rel="noopener noreferrer"></a>
-        <a href="https://www.linkedin.com/in/abel-kihara-87ab86325?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="fa fa-linkedin" id="li" target="_blank" rel="noopener noreferrer"></a>
-        <a href="https://www.instagram.com/theboulder2024?igsh=MW0zdHBwMHdpczdnMw==" class="fa fa-instagram" id="ig" target="_blank" rel="noopener noreferrer"></a>
-        <a href="https://github.com/Boulder1-kihara" class="fa fa-github" id="gith" target="_blank" rel="noopener noreferrer"></a>
-        <a href="https://youtube.com/@theboulder-c5r?si=gXmNGb_IW5VnCy_x" class="fa fa-youtube" id="yt" target="_blank" rel="noopener noreferrer"></a>
-        <a href="https://x.com/TheBoulder73572?s=09" class="fa fa-twitter" id="tw" target="_blank" rel="noopener noreferrer"></a>
-        <a href="mailto: abelkihara8@gmail.com" class="fa fa-envelope" id="gm"></a>
-        <a href="tel:+254708692989" class="fa fa-phone" id="ph"></a>
-        <a href="https://whatsapp.com/dl/" class="fa fa-whatsapp" id="wh" target="_blank" rel="noopener noreferrer"></a>
+        <section id="facebook">
+            <a href="https://www.facebook.com/abel.ndiritu" class="fa fa-facebook" id="fb"></a>
+        </section>
+
+        <section id="linkedin">
+        <a href="https://www.linkedin.com/in/abel-kihara-87ab86325?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="fa fa-linkedin" id="li"></a>
+        </section>
+
+        <section id="instagram">
+                    <a href="https://www.instagram.com/theboulder2024?igsh=MW0zdHBwMHdpczdnMw==" class="fa fa-instagram" id="ig"></a>
+        </section>
+
+        <section id="github">
+                    <a href="https://github.com/Boulder1-kihara" class="fa fa-github" id="gith"></a>
+        </section>
+
+        <section id="youtube">
+                    <a href="https://youtube.com/@theboulder-c5r?si=gXmNGb_IW5VnCy_x" class="fa fa-youtube" id="yt"></a>
+        </section>
+
+        <section id="twitter">
+                    <a href="https://x.com/TheBoulder73572?s=09" class="fa fa-twitter" id="tw"></a>
+        </section>
+
+        <section id="envelope">
+                    <a href="mailto: abelkihara8@gmail.com" class="fa fa-envelope" id="gm"></a>
+        </section>
+
+        <section id="phone">
+                    <a href="tel:+254708692989" class="fa fa-phone" id="ph"></a>
+        </section>
+
+        <section id="whatsapp">
+                    <a href="https://whatsapp.com/dl/" class="fa fa-whatsapp" id="wh"></a>
+        </section>
     </section>
 
-    <!-- Inline script for dark mode toggle -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const toggle = document.getElementById('dark-mode-toggle');
-            const body = document.body;
-
-            // Check for saved theme preference in local storage
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme === 'dark') {
-                body.classList.add('dark-mode');
-                toggle.checked = true;
-            }
-
-            // Event listener for theme toggle
-            toggle.addEventListener('change', () => {
-                if (toggle.checked) {
-                    body.classList.add('dark-mode');
-                    localStorage.setItem('theme', 'dark');
-                } else {
-                    body.classList.remove('dark-mode');
-                    localStorage.setItem('theme', 'light');
-                }
-            });
-        });
-    </script>
-    <!-- Your original index.js script (if it contains other functionalities) -->
     <script src="index.js"></script>
 </body>
 </html>
